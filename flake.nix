@@ -10,7 +10,7 @@
       imports = [
         inputs.devenv.flakeModule
       ];
-      systems = nixpkgs.lib.systems.flakeExposed;
+      systems = [ "x86_64-linux" ];
 
       perSystem = { config, self', inputs', pkgs, system, ... }: {
         devenv.shells.default = {
