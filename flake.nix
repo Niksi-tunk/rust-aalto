@@ -14,7 +14,7 @@
 
       perSystem = { config, self', inputs', pkgs, system, ... }: {
         devenv.shells.default = {
-          packages = [ pkgs.cargo pkgs.rustc ];
+          packages = with pkgs; [ cargo rustc gcc ];
         };
       };
     };
